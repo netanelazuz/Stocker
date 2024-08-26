@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Stocker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/dashboard.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="navbar">
+            <h1 class="main-title">Stocker.</h1>
+            <div class="search-bar">
+                <form action="/search" method="GET">
+                    <input type="search" placeholder="Search a ticker" aria-label="Search" name="search">
+                    <button type="submit"><i data-feather="search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="content">
+            <div class="chart-section">
+                <div class="symbol-bar">
+                    <button>AAPL</button>
+                    <button>TSLA</button>
+                    <button>NVDA</button>
+                    <button>SPY</button>
+                    <button>QQQ</button>
+                    <button>TA135</button>
+                    <button>AMZN</button>
+                    <button>+</button>
+                </div>
+                <div class="chart">
+                    <!-- This is where the TradingView chart will go -->
+                    <div class="chart-title">
+                        <span>ticker ► current price</span>
+                        <span class="growth">growth in month: 13.09%</span>
+                    </div>
+                    <!-- Placeholder for the actual chart -->
+                    <div class="chart-placeholder">
+                        <div class="grid-overlay"></div>
+                    </div>
+                    <div class="timeline-bar">
+                        <button>D</button>
+                        <button>M</button>
+                        <button>Y</button>
+                        <button>2Y</button>
+                        <button>5Y</button>
+                        <button>10Y</button>
+                        <button>All Time</button>
+                    </div>
+                </div>
+            </div>
+            <div class="info-section">
+                <div class="company-info">
+                    <img src="/static/images/company-logo.png" alt="Company Logo">
+                    <h2>Ticker</h2>
+                    <p>Company Full Name</p>
+                </div>
+                <div class="statistics">
+                    <h3>Key Stats</h3>
+                    <p>Volume: ...</p>
+                    <p>Average Volume: ...</p>
+                    <p>AUM: ...</p>
+                    <p>Dividend Yield: ...</p>
+                    <h3>Additional Stats</h3>
+                    <p>Buyers:Sellers: ...</p>
+                    <p>Last Reports: ...</p>
+                    <h3>Recommendation</h3>
+                    <p>Buy Recommendation: ...</p>
+                    <p>Sell Recommendation: ...</p>
+                    <p>Neutral Recommendation: ...</p>
+                </div>
+                <div class="news">
+                    <h3>News & Articles</h3>
+                    <ul>
+                        <li>News Article 1</li>
+                        <li>News Article 2</li>
+                        <li>News Article 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>feather.replace()</script>
+</body>
+</html>
